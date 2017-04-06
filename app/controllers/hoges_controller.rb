@@ -1,11 +1,6 @@
 class HogesController < ApplicationController
   def new
-    @hoge = Hoge.new
-    puts 'gao-n'
-  end
-
-  def nyanchu
-    288888
+    @hoge = Hoge.new 23
   end
 
   def jjj

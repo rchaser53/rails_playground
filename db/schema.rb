@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170404132527) do
+ActiveRecord::Schema.define(version: 20170406150016) do
 
   create_table "hoges", force: :cascade do |t|
     t.string   "name"
     t.integer  "nyan"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "abc"
   end
 
 end

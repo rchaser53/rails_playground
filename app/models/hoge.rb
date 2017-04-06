@@ -1,8 +1,9 @@
 class Hoge < ApplicationRecord
-  def initialize
+  def initialize(a)
+    @poyo = a
   end
 
-  def getta
-    22
+  def get_poyo
+    @poyo
   end
 end
