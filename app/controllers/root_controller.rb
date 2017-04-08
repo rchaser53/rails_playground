@@ -1,6 +1,8 @@
 class RootController < ApplicationController
-  include RootHelper
-  def poyo
-    puts 28
+  def show
+    @message = Message.all
+    puts 23
+    puts @message
+    puts 24
   end
 end

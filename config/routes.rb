@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'rooms#show'
+
   get 'hoges/new'
   post 'hoges/jjj'
-  root 'root#poyo'
+  get 'root/show'
 end
