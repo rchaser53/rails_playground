@@ -1,0 +1,18 @@
+<h1>Hoges#test</h1>
+<p>Find me in app/views/hoges/test.html.erb</p>
+<%= @hoge.get_poyo %>
+<%= form_for(@hoge) do |f| %>
+  <div class="field">
+    <%= f.label :nyan %><br>
+    <%= f.text_field :nyan %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<%# button_to 'nya-n', :action => 'create' %>
+<%# button_to 'nya-n', hoges_path(hoge: {nyan: 'nynyny'}) %>

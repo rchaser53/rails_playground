@@ -3,6 +3,7 @@ class CreateHoges < ActiveRecord::Migration[5.0]
     create_table :hoges do |t|
       t.string :name
       t.integer :nyan
+
       t.timestamps
     end
   end
