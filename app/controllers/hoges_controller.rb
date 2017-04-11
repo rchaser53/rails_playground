@@ -10,5 +10,6 @@ class HogesController < ApplicationController
 
   def jjj
     puts 'abc'
+    Hoge.create(:nyan => 444)
   end
 end
