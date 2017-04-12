@@ -1,10 +1,12 @@
 class HogesController < ApplicationController
   def new
-#    @hoge = Hoge.new (:name => 'test', :nyan => 23)
+  end
+
+  def show
+    @hoge = Hoge.find_by(id: params[:id]) || Hoge.create(nyan: 123)
   end
 
   def index
-    puts 234
     @hoges = Hoge.all
   end
 
