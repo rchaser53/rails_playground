@@ -24,7 +24,10 @@
   </tbody>
 </table>
 <%# これだとcontrollerのmethodが呼ばれるのみ、画面は更新されない %>
-<%= button_to 'nyan', :action => 'jjj' %>
+
+  <%= button_to 'new', :action => 'add' %>
+  <%= button_to 'delete', :action => 'delete' %>
+
 <br>
 
 <%# link_to 'New Hoge', new_hoge_path %>

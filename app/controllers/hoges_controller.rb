@@ -8,8 +8,15 @@ class HogesController < ApplicationController
     @hoges = Hoge.all
   end
 
-  def jjj
+  def add
     puts 'abc'
     Hoge.create(:nyan => 444)
+    redirect_to :action => 'index'
+  end
+
+  def delete
+    puts 'abc'
+    Hoge.destroy_all("nyan = 444")
+    redirect_to :action => 'index'
   end
 end
