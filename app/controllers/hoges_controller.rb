@@ -9,7 +9,9 @@ class HogesController < ApplicationController
   end
 
   def show
-    @hoge = Hoge.find_by(id: params[:id]) || Hoge.create(nyan: 123)
+    unless @hoge = Hoge.find_by(id: params[:id])
+      redirect_to :action => 'index'
+    end
   end
 
   def index
@@ -28,7 +30,7 @@ class HogesController < ApplicationController
   def update
     @hoge = Hoge.find(params[:id])
     if @hoge.update_attributes(hoge_params)
-      #flash[:success] = "Profile updated"
+      flash[:success] = "Profile updated"
       redirect_to @hoge
     else
       render 'edit'
