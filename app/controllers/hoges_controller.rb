@@ -1,5 +1,11 @@
 class HogesController < ApplicationController
   def new
+    @hoge = Hoge.new
+  end
+
+  def create
+    Hoge.create(hoge_params)
+    redirect_to @hoge
   end
 
   def show
@@ -29,8 +35,8 @@ class HogesController < ApplicationController
     end
   end
 
-  def delete
-    Hoge.destroy_all("nyan = 444")
+  def destroy
+    Hoge.destroy(params[:id])
     redirect_to :action => 'index'
   end
 

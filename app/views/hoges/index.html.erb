@@ -16,18 +16,12 @@
       <tr>
         <td><%= hoge.name %></td>
         <td><%= hoge.nyan %></td>
-        <td><%# link_to 'Show', hoge %></td>
+        <td><%= link_to 'Show', hoge %></td>
         <td><%= link_to 'Edit', edit_hoge_path(hoge) %></td>
-        <td><%# link_to 'Destroy', hoge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', hoge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%# これだとcontrollerのmethodが呼ばれるのみ、画面は更新されない %>
-
-  <%= button_to 'new', :action => 'add' %>
-  <%= button_to 'delete', :action => 'delete' %>
-
 <br>
-
-<%# link_to 'New Hoge', new_hoge_path %>
+<%= link_to 'New Hoge', new_hoge_path %>
