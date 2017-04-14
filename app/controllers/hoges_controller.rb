@@ -9,9 +9,11 @@ class HogesController < ApplicationController
   end
 
   def show
-    unless @hoge = Hoge.find_by(id: params[:id])
-      redirect_to :action => 'index'
-    end
+    #unless @hoge = Hoge.find_by(id: params[:id])
+    #  redirect_to :action => 'index'
+    #end
+    @hoge = Hoge.find_by(id: params[:id])
+    render "test", :formats => [:json], :handlers => [:jbuilder]
   end
 
   def index
@@ -25,6 +27,11 @@ class HogesController < ApplicationController
 
   def edit
     @hoge = Hoge.find_by(id: params[:id])
+  end
+
+  def test
+    #@hoge = Hoge.find_by(id: params[:id])
+    #render "test", :formats => [:json], :handlers => [:jbuilder]
   end
 
   def update
