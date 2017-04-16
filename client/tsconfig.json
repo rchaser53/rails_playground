@@ -8,7 +8,6 @@
     "jsx": "react",
     "module": "commonjs",
     "experimentalDecorators": true,
-    "declaration": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noEmit": false,

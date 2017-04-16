@@ -1,7 +1,15 @@
 import * as React from 'react'
 
-export default class extends React.Component<any, any> {
+class App extends React.Component<any, any> {
   render() {
-    return <div>test</div>
+    return <div>
+            {
+              [1,2,3].map((elem) => {
+                return <div key={elem}>{elem}</div>
+              })
+            }
+          </div>
   }
 }
+
+export default App
